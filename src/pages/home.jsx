@@ -62,13 +62,13 @@ const Home = () => {
          variants={fadeIn("up", 0.3)}
             initial="hidden"
             whileInView="show"
-         className="text-gray-700 text-subtopic dark:text-gray-300">Frontend Developer</motion.h3>
+         className="text-gray-700 text-subtopic dark:text-gray-300">Web Developer</motion.h3>
         <motion.p 
          variants={fadeIn("up", 0.4)}
             initial="hidden"
             whileInView="show"
          className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400">
-          Highly motivated Full-Stack Web Developer with hands-on experience in
+          Highly motivated  Web Developer with hands-on experience in
           both frontend (React.js, Tailwind CSS, Framer Motion) and backend
           (Node.js, Express.js) development. Proficient in database management
           with MongoDB Atlas and implementing secure user authentication using
