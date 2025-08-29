@@ -3,7 +3,7 @@ import { LuExternalLink, LuGithub } from "react-icons/lu";
 const Project = ({ image, ProjectName, ProjectDetails, Technology, liveUrl, githubUrl }) => {
   return (
     // Main project card container
-    <div className="overflow-hidden transition-colors duration-300 bg-white border border-gray-200 rounded-lg dark:bg-gray-800 dark:border-gray-700">
+    <div className="overflow-hidden transition-all duration-500 bg-white border border-gray-200 rounded-lg cursor-pointer  dark:bg-gray-800 dark:border-gray-700 hover:scale-105 hover:shadow-xl">
 
       <div className="relative">
         <img

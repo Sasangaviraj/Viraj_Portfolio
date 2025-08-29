@@ -12,6 +12,8 @@ import caraimage from "../assets/cara.png";
 import educaimage from "../assets/educa.png";
 import amayacoffeimage from "../assets/amayacoffe.png";
 import startup from "../assets/startup.png"
+import { motion } from "framer-motion";
+import { fadeIn, textVariant } from "../motion/motion";
 
 const Home = () => {
   const skillData = [
@@ -44,14 +46,28 @@ const Home = () => {
     { title: "Firebase " },
   ];
 
+  
+
   return (
     // Outer div for overall dark mode background and text color
     <div className="text-black transition-colors duration-300 bg-white dark:bg-gray-900 dark:text-gray-100">
       {/* hero section */}
       <section id="home" className=" container flex flex-col lg:gap-6 gap-4 items-center justify-center h-screen  w-full mx-auto sm:px-10 lg:px-[120px] ">
-        <h1 className="text-black dark:text-white lg:text-h1 text-h2-sm">Viraj Jayakodi</h1>
-        <h3 className="text-gray-700 text-subtopic dark:text-gray-300">Frontend Developer</h3>
-        <p className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400">
+        <motion.h1 
+          variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+         className="text-black dark:text-white lg:text-h1 text-h2-sm">Viraj Jayakodi</motion.h1>
+        <motion.h3
+         variants={fadeIn("up", 0.3)}
+            initial="hidden"
+            whileInView="show"
+         className="text-gray-700 text-subtopic dark:text-gray-300">Frontend Developer</motion.h3>
+        <motion.p 
+         variants={fadeIn("up", 0.4)}
+            initial="hidden"
+            whileInView="show"
+         className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400">
           Highly motivated Full-Stack Web Developer with hands-on experience in
           both frontend (React.js, Tailwind CSS, Framer Motion) and backend
           (Node.js, Express.js) development. Proficient in database management
@@ -59,14 +75,18 @@ const Home = () => {
           Firebase Authentication. Passionate about building scalable,
           user-friendly solutions and actively seeking an internship to
           contribute to impactful real-world web projects.
-        </p>
-        <div className="flex gap-2">
+        </motion.p>
+        <motion.div 
+         variants={fadeIn("up", 0.45)}
+            initial="hidden"
+            whileInView="show"
+        className="flex gap-2">
           {/* Assuming BlackButton and WhiteButton are also styled for dark mode */}
           <BlackButton
             onclick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
             title="View project" />
           <WhiteButton onclick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })} title="Contact Me" />
-        </div>
+        </motion.div>
         <div className="flex items-center justify-center gap-6">
           <FiGithub className="w-4 h-4 text-gray-800 cursor-pointer dark:text-white" />
           <FiLinkedin className="w-4 h-5 text-gray-800 cursor-pointer dark:text-white" />
@@ -125,14 +145,14 @@ const Home = () => {
             problem-solving abilities
           </p>
         </div>
-        <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-2">
+        <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-3">
           {/* Project component assumed to handle its own dark mode styling internally */}
           <Project
             image={caraimage}
             ProjectName="CARA(e-commerce web application)"
             ProjectDetails=" A dynamic e-commerce web application for a trendy clothing brand. I designed and developed this fully responsive online store to deliver a smooth and visually appealing shopping experience, allowing users to browse, filter, and purchase stylish outfits effortlessly across all devices."
             Technology={["HTML", "CSS", "Js"]}
-            liveUrl="https://master-safari-37348210.figma.site/"
+            liveUrl="https://sasangaviraj.github.io/carn/"
             githubUrl="https://github.com/Sasangaviraj/carn.git"
           />
 
@@ -141,17 +161,8 @@ const Home = () => {
             ProjectName="Pearth Univercity"
             ProjectDetails="Tech Educa is a modern, responsive website I built to showcase courses, blogs, and institutional details. With a focus on a clean user interface and seamless cross-device compatibility, the site delivers an enhanced user experience for academic exploration."
             Technology={["HTML", "CSS", "Js"]}
-            liveUrl="https://master-safari-37348210.figma.site/"
+            liveUrl=" https://sasangaviraj.github.io/TechEduca-IWT/"
             githubUrl="https://github.com/Sasangaviraj/TechEduca-IWT.git"
-          />
-
-          <Project
-            image={amayacoffeimage}
-            ProjectName="AMAYA-Coffee Shop "
-            ProjectDetails="I created a fully responsive e-commerce web application for a coffee shop, delivering a smooth and dynamic user experience. The application features a clean user interface that allows customers to effortlessly browse products, add items to their cart, and complete secure purchases. The backend is powered by Node.js and Firebase for robust data handling and secure user authentication."
-            Technology={["React", "Tailwind css", "MUI", "Framer Motion", "Node Js", "Express", "MongoDB", "Firebase"]}
-            liveUrl="https://master-safari-37348210.figma.site/"
-            githubUrl="https://github.com/Sasangaviraj"
           />
 
           <Project
@@ -159,10 +170,21 @@ const Home = () => {
             ProjectName="Marketing Web Agency "
             ProjectDetails="I created the front-end for a marketing website designed to help new startups grow. The project focuses on a clean, responsive, and professional design, showcasing my ability to translate visual concepts into a functional, user-friendly interface."
             Technology={["React", "Tailwind css", "Swiper.js", "Framer Motion", "Node js","React Icons"]}
-            liveUrl="https://master-safari-37348210.figma.site/"
+            liveUrl="https://sasangaviraj.github.io/Web_Agency/"
             githubUrl="https://github.com/Sasangaviraj/startup.git"
           />
 
+
+          <Project
+            image={amayacoffeimage}
+            ProjectName="AMAYA-Coffee Shop "
+            ProjectDetails="I created a fully responsive e-commerce web application for a coffee shop, delivering a smooth and dynamic user experience. The application features a clean user interface that allows customers to effortlessly browse products, add items to their cart, and complete secure purchases. The backend is powered by Node.js and Firebase for robust data handling and secure user authentication."
+            Technology={["React", "Tailwind css", "MUI", "Framer Motion", "Node Js", "Express", "MongoDB", "Firebase"]}
+            liveUrl="https://sasangaviraj.github.io/AMAYA_COFFESHOP/"
+            githubUrl="https://github.com/Sasangaviraj"
+          />
+
+          
          
           
         </div>

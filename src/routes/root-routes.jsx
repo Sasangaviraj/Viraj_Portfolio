@@ -14,7 +14,11 @@ const router = createBrowserRouter([
             // You can add more routes here that will be rendered inside RootLayout
         ],
     },
-])
+],
+ {
+    basename: "/Viraj_Portfolio/", 
+  },
+);
 
 const RootRouter = () => {
     return <RouterProvider router={router} />
