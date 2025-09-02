@@ -11,7 +11,7 @@ import { LuGithub } from "react-icons/lu";
 import caraimage from "../assets/cara.png";
 import educaimage from "../assets/educa.png";
 import amayacoffeimage from "../assets/amayacoffe.png";
-import startup from "../assets/startup.png"
+import startup from "../assets/startup.png";
 import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../motion/motion";
 
@@ -46,46 +46,67 @@ const Home = () => {
     { title: "Firebase " },
   ];
 
-  
-
   return (
     // Outer div for overall dark mode background and text color
     <div className="text-black transition-colors duration-300 bg-white dark:bg-gray-900 dark:text-gray-100">
       {/* hero section */}
-      <section id="home" className=" container flex flex-col lg:gap-6 gap-4 items-center justify-center h-screen  w-full mx-auto sm:px-10 lg:px-[120px] ">
-        <motion.h1 
+      <section
+        id="home"
+        className=" container flex flex-col lg:gap-6 gap-4 items-center justify-center h-screen  w-full mx-auto sm:px-10 lg:px-[120px] "
+      >
+        <motion.h1
           variants={textVariant(0.2)}
-            initial="hidden"
-            whileInView="show"
-         className="text-black dark:text-white lg:text-h1 text-h2-sm">Viraj Jayakodi</motion.h1>
+          initial="hidden"
+          whileInView="show"
+          className="text-black dark:text-white lg:text-h1 text-h2-sm"
+        >
+          Viraj Jayakodi
+        </motion.h1>
         <motion.h3
-         variants={fadeIn("up", 0.3)}
-            initial="hidden"
-            whileInView="show"
-         className="text-gray-700 text-subtopic dark:text-gray-300">Web Developer</motion.h3>
-        <motion.p 
-         variants={fadeIn("up", 0.4)}
-            initial="hidden"
-            whileInView="show"
-         className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400">
-          Highly motivated  Web Developer with hands-on experience in
-          both frontend (React.js, Tailwind CSS, Framer Motion) and backend
-          (Node.js, Express.js) development. Proficient in database management
-          with MongoDB Atlas and implementing secure user authentication using
+          variants={fadeIn("up", 0.3)}
+          initial="hidden"
+          whileInView="show"
+          className="text-gray-700 text-subtopic dark:text-gray-300"
+        >
+          Web Developer
+        </motion.h3>
+        <motion.p
+          variants={fadeIn("up", 0.4)}
+          initial="hidden"
+          whileInView="show"
+          className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400"
+        >
+          Highly motivated Web Developer with hands-on experience in both
+          frontend (React.js, Tailwind CSS, Framer Motion) and backend (Node.js,
+          Express.js) development. Proficient in database management with
+          MongoDB Atlas and implementing secure user authentication using
           Firebase Authentication. Passionate about building scalable,
           user-friendly solutions and actively seeking an internship to
           contribute to impactful real-world web projects.
         </motion.p>
-        <motion.div 
-         variants={fadeIn("up", 0.45)}
-            initial="hidden"
-            whileInView="show"
-        className="flex gap-2">
+        <motion.div
+          variants={fadeIn("up", 0.45)}
+          initial="hidden"
+          whileInView="show"
+          className="flex gap-2"
+        >
           {/* Assuming BlackButton and WhiteButton are also styled for dark mode */}
           <BlackButton
-            onclick={() => document.getElementById("projects").scrollIntoView({ behavior: "smooth" })}
-            title="View project" />
-          <WhiteButton onclick={() => document.getElementById("about").scrollIntoView({ behavior: "smooth" })} title="Contact Me" />
+            onclick={() =>
+              document
+                .getElementById("projects")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            title="View project"
+          />
+          <WhiteButton
+            onclick={() =>
+              document
+                .getElementById("about")
+                .scrollIntoView({ behavior: "smooth" })
+            }
+            title="Contact Me"
+          />
         </motion.div>
         <div className="flex items-center justify-center gap-6">
           <FiGithub className="w-4 h-4 text-gray-800 cursor-pointer dark:text-white" />
@@ -95,32 +116,56 @@ const Home = () => {
       </section>
 
       {/* skills and experience section */}
-      <section id="skill" className="flex flex-col items-center justify-center py-20 transition-colors duration-300 bg-gray-50 dark:bg-gray-800">
+      <section
+        id="skill"
+        className="flex flex-col items-center justify-center py-20 transition-colors duration-300 bg-gray-50 dark:bg-gray-800"
+      >
         <div className="container mx-auto text-center lg:px-[120px] px-10 ">
-          <h2 className="mb-4 text-black dark:text-white lg:text-h2 text-h2-sm md:text-h2-sm">
+          <motion.h2
+            variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+            className="mb-4 text-black dark:text-white lg:text-h2 text-h2-sm md:text-h2-sm"
+          >
             Skills & Experience
-          </h2>
-          <p className="mb-12 text-gray-600 lg:text-subtopic dark:text-gray-300">
+          </motion.h2>
+          <motion.p 
+          variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+          className="mb-12 text-gray-600 lg:text-subtopic dark:text-gray-300">
             Technologies I work with and professional experience
-          </p>
+          </motion.p>
 
           {/* Skills Grid */}
-          <div className="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 md:grid-cols-3">
+          <motion.div
+           variants={textVariant(0.24)}
+            initial="hidden"
+            whileInView="show"
+           className="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 md:grid-cols-3">
             {skillData.map((item, index) => (
               <SkillCo key={index} skill={item.skill} detail={item.detail} />
             ))}
-          </div>
+          </motion.div>
 
-          <div className="mt-8 mb-10 lg:w-full lg:mt-8">
+          <motion.div
+           variants={textVariant(0.25)}
+            initial="hidden"
+            whileInView="show"
+           className="mt-8 mb-10 lg:w-full lg:mt-8">
             <Experienceco
               role="Senior Frontend Developer"
               company="TechCorp Inc."
               years="2022"
               description="Led frontend development for e-commerce platform serving 100K+ users. Built reusable component library and improved page load times by 40%."
             />
-          </div>
+          </motion.div>
 
-          <div className="flex flex-col items-center justify-center gap-6 mt-15 ">
+          <motion.div 
+           variants={textVariant(0.26)}
+            initial="hidden"
+            whileInView="show"
+          className="flex flex-col items-center justify-center gap-6 mt-15 ">
             <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">
               Experience with Technologies
             </h2>
@@ -129,7 +174,7 @@ const Home = () => {
                 <TechnologyCo key={index} title={item.title} />
               ))}
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -139,13 +184,27 @@ const Home = () => {
         className="container py-5  min-h-screen mx-auto px-4 lg::px-[120px] mt-10 md:mb-20"
       >
         <div className="flex flex-col gap-2 mb-3 text-center">
-          <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">Projects</h2>
-          <p className="text-gray-600 dark:text-gray-300">
+          <motion.h2
+           variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+           className="text-black dark:text-white lg:text-h2 text-h2-sm">
+            Projects
+          </motion.h2>
+          <motion.p 
+           variants={textVariant(0.21)}
+            initial="hidden"
+            whileInView="show"
+          className="text-gray-600 dark:text-gray-300">
             Selected projects demonstrating my technical skills and
             problem-solving abilities
-          </p>
+          </motion.p>
         </div>
-        <div className="grid grid-cols-1 gap-6 py-10 md:grid-cols-3">
+        <motion.div
+         variants={textVariant(0.22)}
+            initial="hidden"
+            whileInView="show"
+         className="grid grid-cols-1 gap-6 py-10 md:grid-cols-3">
           {/* Project component assumed to handle its own dark mode styling internally */}
           <Project
             image={caraimage}
@@ -169,25 +228,36 @@ const Home = () => {
             image={startup}
             ProjectName="Marketing Web Agency "
             ProjectDetails="I created the front-end for a marketing website designed to help new startups grow. The project focuses on a clean, responsive, and professional design, showcasing my ability to translate visual concepts into a functional, user-friendly interface."
-            Technology={["React", "Tailwind css", "Swiper.js", "Framer Motion", "Node js","React Icons"]}
+            Technology={[
+              "React",
+              "Tailwind css",
+              "Swiper.js",
+              "Framer Motion",
+              "Node js",
+              "React Icons",
+            ]}
             liveUrl="https://sasangaviraj.github.io/Web_Agency/"
             githubUrl="https://github.com/Sasangaviraj/startup.git"
           />
-
 
           <Project
             image={amayacoffeimage}
             ProjectName="AMAYA-Coffee Shop "
             ProjectDetails="I created a fully responsive e-commerce web application for a coffee shop, delivering a smooth and dynamic user experience. The application features a clean user interface that allows customers to effortlessly browse products, add items to their cart, and complete secure purchases. The backend is powered by Node.js and Firebase for robust data handling and secure user authentication."
-            Technology={["React", "Tailwind css", "MUI", "Framer Motion", "Node Js", "Express", "MongoDB", "Firebase"]}
+            Technology={[
+              "React",
+              "Tailwind css",
+              "MUI",
+              "Framer Motion",
+              "Node Js",
+              "Express",
+              "MongoDB",
+              "Firebase",
+            ]}
             liveUrl="https://sasangaviraj.github.io/AMAYA_COFFESHOP/"
             githubUrl="https://github.com/Sasangaviraj"
           />
-
-          
-         
-          
-        </div>
+        </motion.div>
       </section>
 
       {/* get in touch */}
@@ -195,8 +265,14 @@ const Home = () => {
         id="about"
         className="py-20 mt-10 transition-colors duration-300 bg-gray-100 border-b border-gray-200 lg:mb-15 dark:bg-gray-800 dark:border-gray-700"
       >
-        <div className="flex flex-col gap-2 container mx-auto text-center px-4 md:px-4 lg::px-[150px]">
-          <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">Get In Touch</h2>
+        <motion.div 
+         variants={textVariant(0.2)}
+            initial="hidden"
+            whileInView="show"
+        className="flex flex-col gap-2 container mx-auto text-center px-4 md:px-4 lg::px-[150px]">
+          <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">
+            Get In Touch
+          </h2>
           <p className="text-gray-600 dark:text-gray-300 px-4 md:px-[100px] mb-5 lg:text-button-main text-hero-p">
             Looking for a frontend developer? Let's discuss your project and see
             how I can help bring your ideas to life.
@@ -227,7 +303,7 @@ const Home = () => {
               Back to Top
             </button>
           </div>
-        </div>
+        </motion.div>
       </section>
     </div>
   );
@@ -242,7 +318,9 @@ const SkillCo = ({ skill, detail }) => {
       <h3 className="mb-1 font-semibold text-black lg:text-button-main text-hero-p dark:text-white">
         {skill}
       </h3>
-      <p className="text-gray-600 lg:text-link text-button-p dark:text-gray-300">{detail}</p>
+      <p className="text-gray-600 lg:text-link text-button-p dark:text-gray-300">
+        {detail}
+      </p>
     </div>
   );
 };
@@ -260,7 +338,9 @@ const Experienceco = ({ role, company, years, description }) => {
           {years}
         </div>
       </div>
-      <p className="mt-4 text-left text-gray-600 text-button-p dark:text-gray-300">{description}</p>
+      <p className="mt-4 text-left text-gray-600 text-button-p dark:text-gray-300">
+        {description}
+      </p>
     </div>
   );
 };
