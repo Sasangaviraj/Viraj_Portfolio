@@ -76,13 +76,16 @@ const Home = () => {
           whileInView="show"
           className="px-4 text-center text-gray-600 lg:text-hero-p text-button-p dark:text-gray-400"
         >
-          Highly motivated Web Developer with hands-on experience in both
-          frontend (React.js, Tailwind CSS, Framer Motion) and backend (Node.js,
-          Express.js) development. Proficient in database management with
-          MongoDB Atlas and implementing secure user authentication using
-          Firebase Authentication. Passionate about building scalable,
-          user-friendly solutions and actively seeking an internship to
-          contribute to impactful real-world web projects.
+          Highly motivated Full Stack Web Developer with expertise in building
+          responsive single-page applications (SPA) using React.js, Tailwind
+          CSS, and Framer Motion. Skilled in developing RESTful APIs with
+          Node.js & Express.js, integrating secure authentication (Firebase,
+          OAuth2), and managing NoSQL databases (MongoDB Atlas). Experienced in
+          UI/UX design practices, creating user-friendly, scalable, and
+          optimized solutions. Knowledgeable in cloud deployment, CI/CD
+          pipelines (GitHub Actions), and Agile workflows. Strong team
+          collaborator with proven ability to deliver high-performance,
+          maintainable, and modern web applications
         </motion.p>
         <motion.div
           variants={fadeIn("up", 0.45)}
@@ -129,30 +132,33 @@ const Home = () => {
           >
             Skills & Experience
           </motion.h2>
-          <motion.p 
-          variants={textVariant(0.2)}
+          <motion.p
+            variants={textVariant(0.2)}
             initial="hidden"
             whileInView="show"
-          className="mb-12 text-gray-600 lg:text-subtopic dark:text-gray-300">
+            className="mb-12 text-gray-600 lg:text-subtopic dark:text-gray-300"
+          >
             Technologies I work with and professional experience
           </motion.p>
 
           {/* Skills Grid */}
           <motion.div
-           variants={textVariant(0.24)}
+            variants={textVariant(0.24)}
             initial="hidden"
             whileInView="show"
-           className="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 md:grid-cols-3">
+            className="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 md:grid-cols-3"
+          >
             {skillData.map((item, index) => (
               <SkillCo key={index} skill={item.skill} detail={item.detail} />
             ))}
           </motion.div>
 
           <motion.div
-           variants={textVariant(0.25)}
+            variants={textVariant(0.25)}
             initial="hidden"
             whileInView="show"
-           className="mt-8 mb-10 lg:w-full lg:mt-8">
+            className="mt-8 mb-10 lg:w-full lg:mt-8"
+          >
             <Experienceco
               role=" Frontend Developer"
               company="TechCo."
@@ -161,11 +167,12 @@ const Home = () => {
             />
           </motion.div>
 
-          <motion.div 
-           variants={textVariant(0.26)}
+          <motion.div
+            variants={textVariant(0.26)}
             initial="hidden"
             whileInView="show"
-          className="flex flex-col items-center justify-center gap-6 mt-15 ">
+            className="flex flex-col items-center justify-center gap-6 mt-15 "
+          >
             <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">
               Experience with Technologies
             </h2>
@@ -185,26 +192,29 @@ const Home = () => {
       >
         <div className="flex flex-col gap-2 mb-3 text-center">
           <motion.h2
-           variants={textVariant(0.2)}
+            variants={textVariant(0.2)}
             initial="hidden"
             whileInView="show"
-           className="text-black dark:text-white lg:text-h2 text-h2-sm">
+            className="text-black dark:text-white lg:text-h2 text-h2-sm"
+          >
             Projects
           </motion.h2>
-          <motion.p 
-           variants={textVariant(0.21)}
+          <motion.p
+            variants={textVariant(0.21)}
             initial="hidden"
             whileInView="show"
-          className="text-gray-600 dark:text-gray-300">
+            className="text-gray-600 dark:text-gray-300"
+          >
             Selected projects demonstrating my technical skills and
             problem-solving abilities
           </motion.p>
         </div>
         <motion.div
-         variants={textVariant(0.22)}
-            initial="hidden"
-            whileInView="show"
-         className="grid grid-cols-1 gap-6 py-10 md:grid-cols-3">
+          variants={textVariant(0.22)}
+          initial="hidden"
+          whileInView="show"
+          className="grid grid-cols-1 gap-6 py-10 md:grid-cols-3"
+        >
           {/* Project component assumed to handle its own dark mode styling internally */}
           <Project
             image={caraimage}
@@ -265,11 +275,12 @@ const Home = () => {
         id="about"
         className="py-20 mt-10 transition-colors duration-300 bg-gray-100 border-b border-gray-200 lg:mb-15 dark:bg-gray-800 dark:border-gray-700"
       >
-        <motion.div 
-         variants={textVariant(0.2)}
-            initial="hidden"
-            whileInView="show"
-        className="flex flex-col gap-2 container mx-auto text-center px-4 md:px-4 lg::px-[150px]">
+        <motion.div
+          variants={textVariant(0.2)}
+          initial="hidden"
+          whileInView="show"
+          className="flex flex-col gap-2 container mx-auto text-center px-4 md:px-4 lg::px-[150px]"
+        >
           <h2 className="text-black dark:text-white lg:text-h2 text-h2-sm">
             Get In Touch
           </h2>
@@ -287,7 +298,7 @@ const Home = () => {
               />
               <GetInT
                 icon={<LuPhone />}
-                label="+94 76 058 3995" 
+                label="+94 76 058 3995"
                 link="+94 76 058 3995"
               />
               <GetInT
