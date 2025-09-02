@@ -7,7 +7,7 @@ import { FiGithub, FiLinkedin, FiMail } from "react-icons/fi";
 import { MdOutlineEmail } from "react-icons/md";
 // Project component assumed to handle its own dark mode styling internally
 import Project from "../components/project";
-import { LuGithub } from "react-icons/lu";
+import { LuGithub, LuPhone } from "react-icons/lu";
 import caraimage from "../assets/cara.png";
 import educaimage from "../assets/educa.png";
 import amayacoffeimage from "../assets/amayacoffe.png";
@@ -154,10 +154,10 @@ const Home = () => {
             whileInView="show"
            className="mt-8 mb-10 lg:w-full lg:mt-8">
             <Experienceco
-              role="Senior Frontend Developer"
-              company="TechCorp Inc."
-              years="2022"
-              description="Led frontend development for e-commerce platform serving 100K+ users. Built reusable component library and improved page load times by 40%."
+              role=" Frontend Developer"
+              company="TechCo."
+              years="2024"
+              description="Worked 6 months on few frontend projects, developing responsive user interfaces, building reusable components, and ensuring cross-browser compatibility. Collaborated with designers and backend teams to deliver high-quality web applications."
             />
           </motion.div>
 
@@ -282,13 +282,13 @@ const Home = () => {
             <div className="grid grid-cols-1 gap-6 md:grid-cols-3 ">
               <GetInT
                 icon={<FiMail />}
-                label="Email" // Corrected prop name from 'lable' to 'label'
+                label="virajjayakodi1998@gmail.com" // Corrected prop name from 'lable' to 'label'
                 link="mailto:virajjayakodi1998@gmail.com"
               />
               <GetInT
-                icon={<LuGithub />}
-                label="GitHub" // Corrected prop name and label for clarity
-                link="https://github.com/Sasangaviraj"
+                icon={<LuPhone />}
+                label="+94 76 058 3995" 
+                link="+94 76 058 3995"
               />
               <GetInT
                 icon={<FiLinkedin />}
